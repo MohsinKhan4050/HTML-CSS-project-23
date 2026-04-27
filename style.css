@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ccc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    margin-top: auto;
+    gap: 30px;
+}
+
+footer .col {
+    margin-bottom: 20px;
+}
+
+footer .col h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+footer .contact-us {
+    margin-top: 20px;
+}
+
+.contact-us span {
+    display: block;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.contact-us span:hover {
+    color: red;
+}
+
+
+.subscribe-us form input {
+    border: 1px solid #333;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.subscribe-us form input:focus {
+    border-color: red;
+}
+
+.subscribe-us form .send-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background: red;
+    border: 1px solid transparent;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.subscribe-us form .send-btn:hover {
+    border-color: red;
+    background: transparent;
+}
+
+footer .col p,
+.services ul a,
+.contact-us span {
+    font-size: 14px;
+}
+
+footer .social-icons {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+footer .social-icons i {
+    cursor: pointer;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+footer .social-icons i:hover {
+    border-color: red;
+    color: red;
+    transform: translateY(-3px);
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.services ul {
+    list-style: none;
+
+}
+
+.services ul a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.services ul a:hover {
+    color: red;
+}
+
+footer .copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer .copyright a {
+    color: red;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+
+@media (max-width: 800px) {
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-us {
+        grid-column: 1 / 2;
+    }
+
+    .services {
+        grid-column: 2 / 3;
+    }
+
+    .subscribe-us {
+        grid-column: 1 / -1;
+        /* full width */
+    }
+
+    .copyright {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+        grid-template-columns: 1fr;
+        padding: 25px 15px;
+    }
+
+    .about-us,
+    .services,
+    .subscribe-us {
+        grid-column: 1 / -1;
+    }
+}
